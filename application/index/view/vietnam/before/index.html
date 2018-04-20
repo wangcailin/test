@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>EMCC 2016</title>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" type="text/css" href="__CDN__/assets/css/index/vietnam/style.css">
+	<script src="__CDN__/assets/js/index/vietnam/jQuery1.11.3.js"></script>
+    <script src="__CDN__/assets/js/index/vietnam/viewport.js"></script>
+</head>
+<body style="background:#f4f4f3;">
+<div class="wrap_box">
+   	<div class="logo"><img src="__CDN__/assets/img/index/vietnam/logo.png"></div>
+   	<div class="topbg"><img src="__CDN__/assets/img/index/vietnam/top_bg.png"></div>
+   	<div class="titlebox">
+   		<div class="title1">Together we electrify China in the new era</div>
+   		<div class="title2">Energy Management Conference China 2018</div>
+   	</div>
+
+   	<ul class="iconlist">
+   		<li>
+   			<div class="icon"><img src="__CDN__/assets/img/index/vietnam/icon_1.png"></div>
+   			<div class="content">Agenda</div>
+   		</li>
+   		<li class="two">
+   			<div class="icon"><img src="__CDN__/assets/img/index/vietnam/icon_2.png"></div>
+   			<div class="content">Participant notice</div>
+   		</li>
+   		<li class="two">
+   			<div class="icon"><img src="__CDN__/assets/img/index/vietnam/icon_3.png"></div>
+   			<div class="content">Photo sharing</div>
+   		</li>
+   		<li>
+   			<div class="icon"><img src="__CDN__/assets/img/index/vietnam/icon_4.png"></div>
+   			<div class="content">Commenting</div>
+   		</li>
+   		<li>
+   			<div class="icon"><img src="__CDN__/assets/img/index/vietnam/icon_5.png"></div>
+   			<div class="content">Voting</div>
+   		</li>
+   		<li class="two">
+   			<div class="icon"><img src="__CDN__/assets/img/index/vietnam/icon_6.png"></div>
+   			<div class="content">All in EM</div>
+   		</li>
+   		<li class="long">
+   			<div class="icon"><img src="__CDN__/assets/img/index/vietnam/icon_7.png"></div>
+   			<div class="content">Feedback survey</div>
+   		</li>
+   	</ul>
+</div>
+<script>
+	var h1=$(window).height();
+	var h2=(h1-449)/2;
+	$('.iconlist').css('top',h2+'px');
+	$('.iconlist li').click(function(){
+		$(this).addClass('hover');
+    var index=$(this).index();
+		setTimeout(function(){
+			$('.iconlist li').removeClass('hover');
+      if(index==2){
+        setTimeout(function(){
+          window.location='photoshareing.html';
+        },200)
+      }
+      if(index==5){
+        setTimeout(function(){
+          window.location='allinem.html';
+        },200)
+      }
+		},300)
+	})
+</script>
+{include file="common/jssdk" /}
+{include file="common/share" /}
+{include file="common/google" /}
+</body>
+</html>

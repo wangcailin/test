@@ -1,0 +1,68 @@
+<script>
+    var url        = '{$share["url"]}';
+    var shareTitle = '{$share["title"]}';
+    var shareDesc  = '{$share["desc"]}';
+    var openid     = '{$openid}';
+    var imgUrl     = '{$share["imgurl"]}';
+    var bluePrjid  = '{$site.wechat_prjid}';
+
+    wx.ready(function () {
+        (function() {
+            var blue_hm = document.createElement("script");
+            blue_hm.src = "http://tracking.blue-dot.cn/js/monitor.js";
+            var blue_s = document.getElementsByTagName("script")[0];
+            blue_s.parentNode.insertBefore(blue_hm, blue_s);
+
+            //数据监测js文件加载后调用
+            blue_hm.onload = function(){
+                blue_tracker_monitor('init',{
+                    'openid':openid,           //用户openid
+                    'unionid':'',                                             //用户在多微信公众号中的身份 unionid
+                    'prjid':bluePrjid,                                             //跟踪id
+                    'otherid':''                                  //网站其他用于登陆的用户id
+
+                });
+            }
+        })();
+
+        //分享给朋友
+        wx.onMenuShareAppMessage({
+            title: shareTitle,
+            desc: shareDesc,
+            imgUrl: imgUrl, // 分享图标
+            link: url + '?source='+openid,             //分享后用户回访的链接地址，需把分享者的openid附加在地址后面的source参数中
+            success: function () {
+                // 用户确认分享后执行的回调函数
+                blue_tracker_monitor('sharelog',{       //监测分享的方法
+                    'sharetype':'wechatAppMessage',
+                    'shareurl':url + '?source='+openid
+                });
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+
+        //分享到朋友圈
+        wx.onMenuShareTimeline({
+            title: shareTitle,
+            imgUrl: imgUrl, // 分享图标
+            link: url + '?source='+openid,              //分享后用户回访的链接地址，需把分享者的openid附加在地址后面的source参数中
+            success: function () {
+                // 用户确认分享后执行的回调函数
+                blue_tracker_monitor('sharelog',{       //监测分享的方法
+                    'sharetype':'wechatTimeLine',
+                    'shareurl':url + '?source='+openid
+                });
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+    })
+
+    wx.error(function(res){
+        console.log("错误信息 === ");
+        console.log(res);
+    });
+</script>

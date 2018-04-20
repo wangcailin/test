@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>EMCC 2016</title>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" type="text/css" href="__CDN__/assets/css/index/vietnam/style.css">
+	<script src="__CDN__/assets/js/index/vietnam/jQuery1.11.3.js"></script>
+    <script src="__CDN__/assets/js/index/vietnam/viewport.js"></script>
+</head>
+<body style="background:#f4f4f3;">
+<div class="wrap_box">
+   	<div class="logo"><img src="__CDN__/assets/img/index/vietnam/logo.png"></div>
+   	<div class="topbg"><img src="__CDN__/assets/img/index/vietnam/top_bg.png"></div>
+   	<div class="titlebox">
+   		<div class="title1">Together we electrify China in the new era</div>
+   		<div class="title2">Energy Management Conference China 2018</div>
+   	</div>
+    <div class="photosharing">
+        <div class="phototitle">Photo sharing</div>
+        <div class="photoline"><img src="__CDN__/assets/img/index/vietnam/shareingline.png"></div>
+        <div class="overphoto"><img src="__CDN__/assets/img/index/vietnam/photoicon.png"></div>
+        <div class="photobox">
+          <ul class="photolist">
+            <li><img src="__CDN__/assets/img/index/vietnam/photo1.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+            <li><img src="__CDN__/assets/img/index/vietnam/photo.png"></li>
+          </ul>
+        </div>
+    </div>
+    <div class="footerbtn">
+        <div class="btn">Upload photos</div>
+    </div>
+</div>
+
+
+<div class="tanc" style=" display: none;">
+    <div class="newbox"  style="display: none; margin-top: 0;">
+        <div class="content">Upload failed!</div>
+        <div class="close"><img src="__CDN__/assets/img/index/vietnam/close.png"></div>
+    </div>
+    <div class="bigimg">
+      <img src="__CDN__/assets/img/index/vietnam/photo.png">
+    </div>
+    <img src="__CDN__/assets/img/index/vietnam/close.png" class="newclose">
+</div>
+
+
+<script>
+	var h1=$(window).height();
+  var h2=(h1-430-120);
+  var h3=(h1-430-120-100);
+  $('.wrap_box').css('height',h1+'px');
+  $('.photosharing').css('height',h2+'px');
+  $('.photosharing .overphoto').css('height',h3+'px');
+  $('.newclose').click(function(){
+      $('.tanc').hide();
+  })
+  $('.footerbtn .btn').click(function(){
+      $(this).addClass('hover');
+      setTimeout(function(){
+           $('.footerbtn .btn').removeClass('hover');  
+      },300)
+  })
+  $('.photolist li').click(function(){
+      var img = $(this).find('img').attr('src');
+      $('.tanc').show();
+      $('.tanc .bigimg').find('img').attr('src',img);
+  })
+</script>
+{include file="common/jssdk" /}
+{include file="common/share" /}
+{include file="common/google" /}
+</body>
+</html>

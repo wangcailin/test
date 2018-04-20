@@ -1,0 +1,13 @@
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    wx.config({
+        appId: '{$jssdk["appId"]}',
+        timestamp: {$jssdk["timestamp"]},
+        nonceStr: '{$jssdk["nonceStr"]}',
+        signature: '{$jssdk["signature"]}',
+        url: '{$jssdk["url"]}',
+        jsApiList: [
+            'onMenuShareTimeline','onMenuShareAppMessage'
+        ]
+    });
+</script>

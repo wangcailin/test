@@ -1,0 +1,19 @@
+<?php
+
+namespace {%controllerNamespace%};
+
+use app\common\controller\Wechat;
+
+/**
+ * @project {%projectName%}
+ */
+class {%controllerName%} extends Wechat
+{
+
+    public function _initialize()
+    {
+        parent::_initialize();
+    }
+    
+{%controllerFunction%}
+}

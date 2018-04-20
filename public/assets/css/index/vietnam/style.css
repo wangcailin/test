@@ -1,0 +1,104 @@
+/* CSS Document */
+@font-face {
+    font-family: 'Conv_Siemens Sans Roman';
+    src: url('fonts/Siemens Sans Roman.eot');
+    src: local('☺'), url('fonts/Siemens Sans Roman.woff') format('woff'), url('fonts/Siemens Sans Roman.ttf') format('truetype'), url('fonts/Siemens Sans Roman.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,body{min-height:100%;}
+body{background:#fff;}
+body,div,dl,dt,dd,ul,li,p,form,span,em,input,textarea,button{ padding:0; margin:0; border:0;font:32px  'Conv_Siemens Sans Roman';}
+img{border:0; vertical-align:top;}
+em{font-style:normal;}
+li{list-style:none;}
+a{color:#fff; text-decoration:none;}
+a:hover{text-decoration:none;}
+.left{float:left;}
+.right{float:right;}
+*{-webkit-touch-callout:none;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+
+/*首页开始*/
+.wrap_box{ width: 828px; height: 100%; min-height: 1344px; max-height: 99999px; position: relative; }
+.wrap_box .logo{ position: absolute; top: 30px; left: 30px; }
+.wrap_box .topbg{ position: absolute; top: 116px; left: 0; }
+.wrap_box .titlebox{ width: 480px; position: absolute; top: 158px; right: 30px; background: none; }
+.wrap_box .titlebox .title1{ background: url('/assets/img/index/vietnam/title_bg.png') no-repeat; background-size:100% 100%; padding: 22px; font-size: 36px; color: #ffffff; }
+.wrap_box .titlebox .title2{ background: url('/assets/img/index/vietnam/title_bg.png') no-repeat; background-size:100% 100%; padding: 22px; font-size: 22px; color: #ffffff; margin-top: 8px; }
+.wrap_box .iconlist{ width: 788px;   min-height: 111px; position: relative; top:  478px; margin-left: 30px; }
+.wrap_box .iconlist li{ width: 374px; height: 240px; background: #acb439; margin-right: 20px; float: left; margin-bottom: 20px; }
+.wrap_box .iconlist li.long{ width: 768px;background: #a0a91e; }
+.wrap_box .iconlist li .icon{ text-align: center; padding-top: 42px; padding-bottom: 40px; }
+.wrap_box .iconlist li .content{ text-align: center; color: #ffffff;  font-size: 32px; }
+.wrap_box .iconlist li.two{background: #a0a91e;}
+.wrap_box .iconlist li.hover:nth-child(1){background: #bdc663}
+.wrap_box .iconlist li.hover:nth-child(2){background: #b4bc41}
+.wrap_box .iconlist li.hover:nth-child(3){background: #b4bc41}
+.wrap_box .iconlist li.hover:nth-child(4){background: #bdc663}
+.wrap_box .iconlist li.hover:nth-child(5){background: #bdc663}
+.wrap_box .iconlist li.hover:nth-child(6){background: #b4bc41}
+.wrap_box .iconlist li.hover:nth-child(7){background: #b4bc41}
+
+.wrap_box .photosharing{ width: 764px;   min-height: 111px; position: relative; top:  430px; margin-left: 30px;}
+.wrap_box .photosharing .phototitle{ font-size: 30px; color: #b4bc41; }
+.wrap_box .photosharing .photoline{ padding-top: 20px; height: 1px;  }
+.wrap_box .photosharing .overphoto{display: -webkit-box;
+-webkit-box-orient: horizontal;
+-webkit-box-pack: center;
+-webkit-box-align: center; display: none;}
+.wrap_box .photosharing .photolist{ margin-top: 22px; width: 795px; display: inline-block; padding-bottom: 120px;  } 
+.wrap_box .photosharing .photolist li{ width: 234px; border: 1px #d9d9d1 solid;float: left; margin-right: 28px; margin-bottom: 26px; }
+.wrap_box .photosharing .photolist li img{ width: 234px; height: 156px; display: block; }
+.wrap_box .photosharing .upbox{ width: 764px; height: 684px; background: url('/assets/img/index/vietnam/upphotobg.jpg') no-repeat;display: -webkit-box;
+-webkit-box-orient: horizontal;
+-webkit-box-pack: center;
+-webkit-box-align: center; }
+
+.wrap_box .photosharing .upbox.photope{ position: relative; }
+.wrap_box .photosharing .upbox .upreload{ position: absolute; right: 20px; bottom: 25px; }
+
+.wrap_box .footerbtn{ width: 828px; height: 120px; background: #ffffff; position: fixed; bottom: 0;-webkit-box-shadow:0px -6px 10px rgba(81,81,61,0.06); border-top: 1px #d9d9d1 solid;}
+.wrap_box .footerbtn .btn{ width: 764px; height: 76px; background: #b4bc41; margin: 0 auto; margin-top: 22px; text-align: center;line-height: 76px; color: #ffffff; }
+.wrap_box .footerbtn .btn.submit{ background: #c7ca96; }
+.wrap_box .footerbtn .btn.hover{background: #a4ad21;}
+
+.tanc{ width: 100%; height: 100%; background: rgba(0,0,0,0.9); position: fixed;top: 0; left: 0; display: none;display: -webkit-box;
+-webkit-box-orient: horizontal;
+-webkit-box-pack: center;
+-webkit-box-align: center; }
+.tanc .tsbox{ width: 680px; height: 655px; background: #ffffff; position: absolute; top:200px; left: 74px; border-radius: 8px; }
+.tanc .tsbox .tstitle{ text-align: center; font-size: 30px; color: #333333; line-height: 30px; padding-top: 82px; }
+.tanc .tsbox .peoplelist{ padding-top: 30px; }
+.tanc .tsbox .peoplelist .left{ text-align: center;  width: 50%;}
+.tanc .tsbox .peoplelist .right{ text-align: center;  width: 50%;}
+.tanc .tsbox .peoplelist .p1{padding-left: 18px;}
+.tanc .tsbox .peoplelist .p2{padding-right: 18px;}
+.tanc .tsbox .peoplelist .yes{padding-top: 20px;}
+.tanc .tsbox .peoplelist .no{padding-top: 20px;}
+.tanc .tsbox .close{ position: absolute; top: 20px; right: 20px; }
+.tanc .newbox{ width: 470px; height: 260px; background: #ffffff; margin: 0 auto; margin-top: 300px; position: relative; }
+.tanc .newbox .close{ position: absolute; top: 20px; right: 20px; }
+.tanc .newbox .content{ line-height: 280px; text-align: center; }
+.tanc .bigimg img{ width: 828px; }
+.tanc .newclose{ position: absolute; top: 40px; right: 40px; }
+
+
+
+.wrap_box.voting .footerbtn{ position: absolute;  }
+.wrap_box.voting .question{ font-size: 38px; line-height: 46px; color: #aab327; padding-top: 22px; }
+.wrap_box.voting .answerlist{ margin-top: 30px; padding-bottom: 120px; }
+.wrap_box.voting .answerlist li{ width: 742px; min-height: 98px; border:1px #c7ca96 solid; position: relative; margin-bottom: 40px; background: #ffffff; }
+.wrap_box.voting .answerlist li span{ width: 52px; height: 52px; border-radius: 100px; border:2px #989a78 solid; position: absolute; top: 21px; left: 29px; text-align: center;line-height: 52px; font-size: 40px; font-weight: bold;color: #989a78; }
+.wrap_box.voting .answerlist li .an{  line-height: 46px; font-size: 38px; color: #989a78; padding: 26px 0;padding-left: 108px;padding-right: 29px; }
+.wrap_box.voting .photosharing{ top: 0; padding-top: 430px; }
+.wrap_box.voting .answerlist li.hover{ background: #acb439;  border:1px #acb439 solid; }
+.wrap_box.voting .answerlist li.hover span{ color: #acb439; background: #ffffff; border: none; }
+.wrap_box.voting .answerlist li.hover .an{ color: #ffffff; }
+
+
+
+
+
+
+
